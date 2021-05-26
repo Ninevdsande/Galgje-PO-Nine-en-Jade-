@@ -1,23 +1,5 @@
 import random
-GALGTEKENING = ['''
+word_list = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 
- +---+
- |   |
-     |
-     |
-     |
-     |
-=========''', '''
-
- +---+
- |   |
- 0   |
-     |
-     |
-     |
-========='''', '''
-
- +---+
- |   |
- 0   |
- |    |]
+def get word (word_list):
+  word = random.choice(word_list)
