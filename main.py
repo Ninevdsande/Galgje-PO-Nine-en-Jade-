@@ -13,3 +13,4 @@ def play(word):
   guessed_words = []
   tries = 5
   print("Je gaat galgje spelen!")
+mm
