@@ -15,5 +15,9 @@ def play(word):
   print("Je gaat galgje spelen!")
   print(display_hangman(tries))
   print(word_completion)
-  print()
+  print("\n")
+  while not guessed and tries > 0:
+    guess = input("kies een letter:").upper()
+    if len(guess) == 1 
+
 
