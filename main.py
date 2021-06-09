@@ -34,4 +34,4 @@ def play(word):
 
 print(get_word())
 
-print(1)
+
