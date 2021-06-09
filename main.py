@@ -5,8 +5,21 @@ def get_word():
   word = random.choice(word_list)
   return word.upper()
 
-def display_hangman():
-  aap = 1
+hangman_values = ['O','/','|','\\','|','/','\\']
+show_hangman_values = [' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
+def display_hangman(values):
+    print()
+    print("\t +--------+")
+    print("\t |       | |")
+    print("\t {}       | |".format(values[0]))
+    print("\t{}{}{}      | |".format(values[1], values[2], values[3]))
+    print("\t {}       | |".format(values[4]))
+    print("\t{} {}      | |".format(values[5],values[6]))
+    print("\t         | |")
+    print("  _______________|_|___")
+    print("  `````````````````````")
+    print()
 
 
 def play(word):
@@ -39,7 +52,6 @@ def play(word):
       print("goed gekozen, " + guess + " komt in het woord voor!")
       guessed_letters.append(guess)
       word_as_list = list(word_completion)
-
 
 play(get_word())
 print(get_word())
