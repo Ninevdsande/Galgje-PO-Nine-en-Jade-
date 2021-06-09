@@ -33,3 +33,5 @@ def play(word):
       word_as_list = list(word_completion)
 
 print(get_word())
+
+print(1)
