@@ -40,11 +40,10 @@ def play(word):
       guessed_letters.append(guess)
       word_as_list = list(word_completion)
 
-<<<<<<< HEAD
+
 play(get_word())
-=======
 print(get_word())
 
 
->>>>>>> origin/master
+
 
