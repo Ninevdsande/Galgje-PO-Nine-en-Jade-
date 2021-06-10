@@ -23,11 +23,16 @@ def display_hangman(values):
 
 
 def play(word):
-  print("We spelen galgje, leuk dat je mee doet!")
+  print ()
+  naam = input ('Hoe heet je? ')
+  print ()
+  print ('Hallo,', naam,'We spelen galgje, leuk dat je mee doet! ')
+  print ()
   print("Je wint door letters te raden en zo achter het woord te komen.")
   print( )
-  print("Je hebt 5 levens en als deze levens op zijn ben je dood")
-  print("Laten we beginnen")
+  print("Je hebt 5 levens en als deze levens op zijn ben je dood.")
+  print( )
+  print("Laten we beginnen!")
   print( )
   print("Het eerste woord heeft " + str(len(word)) + " letters")
 
