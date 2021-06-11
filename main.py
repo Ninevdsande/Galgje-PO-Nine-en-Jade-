@@ -44,19 +44,12 @@ def play(word):
     if guess in guessed_letters:
       print("Je hebt deze letter al een keer geraden.")
 
-    elif guessed:
-       print("goed gekozen, " + guess + " komt in het woord voor!")
-      guessed_letters.append(guess)
-      word_as_list = list(word_completion) 
-      
-      
-
-  else:
-    print(guess,"komt niet in het woord voor.")
+    elif guess not in word:
+      print(guess,"komt niet in het woord voor.")
       tries -= 1
       guessed_letters.append(guess)
       print("Je hebt nog " + str(tries) + " beurten over")
-    if tries -= 1
+     if tries -= 1
           print("""____
      |
      |
@@ -64,6 +57,46 @@ def play(word):
      |
      |
 _____|""")
+    if tries -= 2
+    print("""  ____
+  | \|
+     |
+     |
+     |
+     |
+_____|""")
+    if tries -=3
+    print ("""  ____
+  | \|
+  0  |
+  |  |
+     |
+     |
+_____|""")
+    if tries -=4
+    print ("""  ____
+  | \|
+  0  |
+ /|\ |
+     |
+     |
+_____|""")
+    if tries -=5
+    print("""  ____
+  | \|
+  0  |
+ -|- |
+ / \ |
+     |
+_____|""")
+      
+
+
+    else:
+      print("goed gekozen, " + guess + " komt in het woord voor!")
+      guessed_letters.append(guess)
+      word_as_list = list(word_completion) 
+     
 
      
 
