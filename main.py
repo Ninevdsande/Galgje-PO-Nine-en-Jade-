@@ -34,7 +34,7 @@ def play(word):
   print(word_completion)
   print("\n")
 
-  while not guessed and tries > 0:
+  while not guessed and counter > 0:
     guess = input("kies een letter:").upper()
     if guess == word:
       print("Goed gedaan! Je hebt het woord" + word + "goed geraden!")
@@ -46,9 +46,9 @@ def play(word):
 
     elif guess not in word:
       print(guess,"komt niet in het woord voor.")
-      tries -= 1
+      counter += 1
       guessed_letters.append(guess)
-      print("Je hebt nog " + str(tries) + " beurten over")
+      print("Je hebt nog " + str(counter) + " beurten over")
       counter= counter + 1
       if counter== 1:
         print("""____
@@ -59,7 +59,7 @@ def play(word):
      |
 _____|""")
     if counter == 2:
-    print("""  ____
+      print ("""____
   | \|
      |
      |
@@ -67,7 +67,7 @@ _____|""")
      |
 _____|""")
     if counter == 3:
-    print ("""  ____
+      print ("""  ____
   | \|
   0  |
   |  |
@@ -75,7 +75,7 @@ _____|""")
      |
 _____|""")
     if counter == 4:
-    print ("""  ____
+      print ("""  ____
   | \|
   0  |
  /|\ |
@@ -83,7 +83,7 @@ _____|""")
      |
 _____|""")
     if counter == 5:
-    print("""  ____
+      print("""  ____
   | \|
   0  |
  -|- |
