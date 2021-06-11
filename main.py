@@ -27,28 +27,29 @@ def play(word):
   guessed_letters = []
   guessed_words = []
   counter = 0
-
   
 
 
   print(word_completion)
   print("\n")
 
-  while not guessed and counter > 0:
+  while not guessed and counter < 0:
     guess = input("kies een letter:").upper()
     if guess == word:
       print("Goed gedaan! Je hebt het woord" + word + "goed geraden!")
       print("Dit is het einde van het spel, klik op Run om het spel nog een keer te spelen!")
       break
 
-    if guess in guessed_letters:
-      print("Je hebt deze letter al een keer geraden.")
-
+    elif guess in word:
+      print("goed gekozen, " + guess + " komt in het woord voor!")
+      guessed_letters.append(guess)
+      word_as_list = list(word_completion) 
+     
     elif guess not in word:
       print(guess,"komt niet in het woord voor.")
-      counter += 1
+      tries -= 1
       guessed_letters.append(guess)
-      print("Je hebt nog " + str(counter) + " beurten over")
+      print("Je hebt nog " + str(tries) + " beurten over")
       counter= counter + 1
       if counter== 1:
         print("""____
@@ -59,7 +60,7 @@ def play(word):
      |
 _____|""")
     if counter == 2:
-      print ("""____
+      print("""  ____
   | \|
      |
      |
@@ -90,20 +91,14 @@ _____|""")
  / \ |
      |
 _____|""")
-      
 
+    elif guess in guessed_letters:
+      print("Je hebt deze letter al een keer geraden.")
 
-    else:
-      print("goed gekozen, " + guess + " komt in het woord voor!")
-      guessed_letters.append(guess)
-      word_as_list = list(word_completion) 
-     
-
-     
-
-
+  
 play(get_word())
 print(get_word())
+
 
 
 
