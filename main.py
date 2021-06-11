@@ -7,18 +7,6 @@ def get_word():
   return word.upper()
 
 
-galg = [
-  "---------",
-  "|       |",
-  "|       O",
-  "|       |",
-  "|      -+-",
-  "|       |",
-  "|      / \\",
-  "|",
-  "|",
-  "------------"
-]
 
 def play(word):
   print ()
@@ -56,23 +44,28 @@ def play(word):
     if guess in guessed_letters:
       print("Je hebt deze letter al een keer geraden.")
 
-    elif guess not in word:
-      print(guess,"komt niet in het woord voor.")
+    elif guessed:
+       print("goed gekozen, " + guess + " komt in het woord voor!")
+      guessed_letters.append(guess)
+      word_as_list = list(word_completion) 
+      
+      
+
+  else:
+    print(guess,"komt niet in het woord voor.")
       tries -= 1
       guessed_letters.append(guess)
       print("Je hebt nog " + str(tries) + " beurten over")
-    galgregel=tries
-    nr_of_to_print_lines=(5-tries)
-    while nr_of_to_print_lines>0:
-     print (galg[galgregel])
-     galgregel +=1 
-    nr_of_to_print_lines -=1
-    print ("")  
+    if tries -= 1
+          print("""____
+     |
+     |
+     |
+     |
+     |
+_____|""")
 
-  else:
-      print("goed gekozen, " + guess + " komt in het woord voor!")
-      guessed_letters.append(guess)
-      word_as_list = list(word_completion) 
+     
 
 
 play(get_word())
