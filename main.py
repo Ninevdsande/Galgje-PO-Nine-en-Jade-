@@ -28,7 +28,7 @@ def play(word):
   counter = 0
   tries = 5
   
-
+  
 
   print(word_completion)
   print("\n")
@@ -42,8 +42,12 @@ def play(word):
 
     elif guess in word:
       print("goed gekozen, " + guess + " komt in het woord voor!")
-      guessed_letters.append(guess)
+      guessed_letters.append(guess)     
       word_as_list = list(word_completion) 
+      indices = [i for i, letter in enumerate(word) if letter == guess]
+      for index in indices: 
+        word_as_list[index] = guess
+      word_completion = "".join(word_as_list)
      
     elif guess not in word:
       print(guess," komt niet in het woord voor.")
