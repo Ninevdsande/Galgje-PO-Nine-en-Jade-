@@ -1,5 +1,4 @@
 import random
-counter = 0
 word_list = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 
 def get_word():
@@ -27,13 +26,14 @@ def play(word):
   guessed_letters = []
   guessed_words = []
   counter = 0
+  tries = 5
   
 
 
   print(word_completion)
   print("\n")
 
-  while not guessed and counter < 0:
+  while not guessed and counter < 5:
     guess = input("kies een letter:").upper()
     if guess == word:
       print("Goed gedaan! Je hebt het woord" + word + "goed geraden!")
