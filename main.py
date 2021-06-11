@@ -6,8 +6,6 @@ def get_word():
   word = random.choice(word_list)
   return word.upper()
 
-hangman_values = ['O','/','|','\\','|','/','\\']
-show_hangman_values = [' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
 galg = [
   "---------",
@@ -63,11 +61,19 @@ def play(word):
       tries -= 1
       guessed_letters.append(guess)
       print("Je hebt nog " + str(tries) + " beurten over")
+    galgregel=tries
+    nr_of_to_print_lines=(5-tries)
+    while nr_of_to_print_lines>0:
+     print (galg[galgregel])
+     galgregel +=1 
+    nr_of_to_print_lines -=1
+    print ("")  
 
-    else:
+  else:
       print("goed gekozen, " + guess + " komt in het woord voor!")
       guessed_letters.append(guess)
-      word_as_list = list(word_completion)   
+      word_as_list = list(word_completion) 
+
 
 play(get_word())
 print(get_word())
