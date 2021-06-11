@@ -26,7 +26,7 @@ def play(word):
   guessed = False
   guessed_letters = []
   guessed_words = []
-  tries = 5
+  counter = 0
 
   
 
@@ -49,15 +49,16 @@ def play(word):
       tries -= 1
       guessed_letters.append(guess)
       print("Je hebt nog " + str(tries) + " beurten over")
-     if tries -= 1
-          print("""____
+      counter= counter + 1
+      if counter== 1:
+        print("""____
      |
      |
      |
      |
      |
 _____|""")
-    if tries -= 2
+    if counter == 2:
     print("""  ____
   | \|
      |
@@ -65,7 +66,7 @@ _____|""")
      |
      |
 _____|""")
-    if tries -=3
+    if counter == 3:
     print ("""  ____
   | \|
   0  |
@@ -73,7 +74,7 @@ _____|""")
      |
      |
 _____|""")
-    if tries -=4
+    if counter == 4:
     print ("""  ____
   | \|
   0  |
@@ -81,7 +82,7 @@ _____|""")
      |
      |
 _____|""")
-    if tries -=5
+    if counter == 5:
     print("""  ____
   | \|
   0  |
