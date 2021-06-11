@@ -91,9 +91,8 @@ _____|""")
  / \ |
      |
 _____|""")
-
-    elif guess in guessed_letters:
-      print("Je hebt deze letter al een keer geraden.")
+  if guess in guessed_letters:
+     print("Je hebt deze letter al een keer geraden.")
 
   
 play(get_word())
