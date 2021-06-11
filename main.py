@@ -94,6 +94,9 @@ _____|""")
   if guess in guessed_letters:
      print("Je hebt deze letter al een keer geraden.")
 
+  if counter ==5:
+    print("Jammer!Je hebt het woord niet geraden. Het woord was"+ word +"Volgende keer beter! Als je het nog een keer wilt proberen klik dan op run.")
+
   
 play(get_word())
 print(get_word())
