@@ -13,7 +13,7 @@ def play(word):
   print ()
   print ("Hallo,", naam,"we spelen galgje, leuk dat je mee doet!" )
   print ()
-  print("Je wint door letters te raden en zo achter het woord te komen.")
+  print("Je wint door letters te raden en zo achter het woord te komen, als je denkt het hele woord te weten moet je deze helemaal intypen.")
   print( )
   print("Je hebt 5 levens en als deze levens op zijn ben je dood.")
   print( )
@@ -34,7 +34,7 @@ def play(word):
   print("\n")
 
   while not guessed and counter < 5:
-    guess = input("kies een letter:").upper()
+    guess = input("kies een letter/ typ het hele woord in:").upper()
     if guess == word:
       print("Goed gedaan! Je hebt het woord " + word + " goed geraden!")
       print("Dit is het einde van het spel, klik op Run om het spel nog een keer te spelen!")
@@ -42,12 +42,14 @@ def play(word):
 
     elif guess in word:
       print("goed gekozen, " + guess + " komt in het woord voor!")
-      guessed_letters.append(guess)     
+
+      guessed_letters.append(guess)    
       word_as_list = list(word_completion) 
       indices = [i for i, letter in enumerate(word) if letter == guess]
       for index in indices: 
         word_as_list[index] = guess
-      word_completion = "".join(word_as_list)
+      word_completion = "".join(word_as_list) 
+      
      
     elif guess not in word:
       print(guess," komt niet in het woord voor.")
